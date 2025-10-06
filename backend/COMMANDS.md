@@ -6,7 +6,8 @@ cd ./backend/demo
 ```
 
 ```cmd
-
+cd ./backend/todo
+./mvnw spring-boot:run
 ```
 
 ```cmd
