@@ -6,8 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import lombok.RequiredArgsConstructor;
-import main.java.com.example.todo.model.Todo;
-import main.java.com.example.todo.service.TodoService;
+import com.example.todo.model.Todo;
+import com.example.todo.service.TodoService;
 
 @RestController
 @RequestMapping("/api/todos")

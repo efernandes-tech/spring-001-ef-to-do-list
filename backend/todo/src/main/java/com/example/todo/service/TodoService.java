@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import main.java.com.example.todo.model.Todo;
-import main.java.com.example.todo.repository.TodoRepository;
+import com.example.todo.model.Todo;
+import com.example.todo.repository.TodoRepository;
 
 @Service
 @RequiredArgsConstructor

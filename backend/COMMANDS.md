@@ -11,7 +11,15 @@ cd ./backend/todo
 ```
 
 ```cmd
+curl -X POST http://localhost:8080/api/todos \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Learn Spring Boot","description":"Build awesome apps"}'
 
+curl http://localhost:8080/api/todos
+
+curl -X PUT http://localhost:8080/api/todos/1 \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Learn Spring Boot","description":"Build awesome apps","completed":true'
 ```
 
 ```cmd
