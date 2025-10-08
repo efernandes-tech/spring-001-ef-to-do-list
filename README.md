@@ -1,9 +1,9 @@
 <h1 align="center">
-    <a href="#" alt="Project Name">Project Name</a>
+    <a href="#" alt="Spring Boot Todo List">Spring Boot Todo List</a>
 </h1>
 
 <h3 align="center">
-    Brief description of your project
+    A RESTful Todo List API built with Spring Boot and JPA
 </h3>
 
 <p align="center">
@@ -18,7 +18,7 @@
 </p>
 
 <h4 align="center">
-    Status: In progress | Finished
+    Status: In progress
 </h4>
 
 <p align="center">
@@ -31,15 +31,17 @@
 
 ## About
 
-Description about your project and what it does.
+A simple Todo List REST API built with Spring Boot, JPA/Hibernate, and H2 database. This project demonstrates CRUD operations with a clean architecture using Repository, Service, and Controller layers.
 
 ---
 
 ## Features
 
--   [x] Feature One
--   [x] Feature Two
--   [ ] Feature Three (in progress)
+-   [x] RESTful API endpoints for CRUD operations
+-   [x] JPA/Hibernate integration with H2 database
+-   [x] Todo entity with title, description, and completed status
+-   [x] Service layer for business logic
+-   [x] Repository layer for data access
 
 ---
 
@@ -48,46 +50,75 @@ Description about your project and what it does.
 ### Pre-requisites
 
 Before you begin, you will need to have the following tools installed:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+[Git](https://git-scm.com), [Java 17+](https://www.oracle.com/java/technologies/downloads/), [Maven](https://maven.apache.org/).
 
-#### Running the project
+#### Running the Backend
 
 ```bash
 # Clone this repository
 git clone https://github.com/efernandes-tech/spring-001-ef-to-do-list.git
 
-# Access the project folder
-cd spring-001-ef-to-do-list
+# Access the backend folder
+cd spring-001-ef-to-do-list/backend/todo
 
-# Install dependencies
-npm install
+# Run the application using Maven wrapper
+./mvnw spring-boot:run
 
-# Run the application
-npm start
+# The server will start at port: 8080
+# API endpoints available at http://localhost:8080/api/todos
+# H2 Console available at http://localhost:8080/h2-console
+```
 
-# The server will start at port: 3000 - go to http://localhost:3000
+#### API Endpoints
+
+```bash
+# Get all todos
+GET http://localhost:8080/api/todos
+
+# Get todo by ID
+GET http://localhost:8080/api/todos/{id}
+
+# Create new todo
+POST http://localhost:8080/api/todos
+Content-Type: application/json
+{
+  "title": "Learn Spring Boot",
+  "description": "Build awesome apps",
+  "completed": false
+}
+
+# Update todo
+PUT http://localhost:8080/api/todos/{id}
+Content-Type: application/json
+{
+  "title": "Learn Spring Boot",
+  "description": "Build awesome apps",
+  "completed": true
+}
+
+# Delete todo
+DELETE http://localhost:8080/api/todos/{id}
 ```
 
 ---
 
 ## Tech Stack
 
-**Frontend:**
-
--   [React](https://reactjs.org/)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Tailwind CSS](https://tailwindcss.com/)
-
 **Backend:**
 
--   [Node.js](https://nodejs.org/)
--   [Express](https://expressjs.com/)
--   [MongoDB](https://www.mongodb.com/)
+-   [Spring Boot 3.5.6](https://spring.io/projects/spring-boot)
+-   [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+-   [Hibernate](https://hibernate.org/)
+-   [H2 Database](https://www.h2database.com/)
+-   [Lombok](https://projectlombok.org/)
+-   [Maven](https://maven.apache.org/)
+-   [Java 17](https://www.oracle.com/java/technologies/downloads/)
 
 **Tools:**
 
 -   [Visual Studio Code](https://code.visualstudio.com/)
 -   [Postman](https://www.postman.com/)
+-   [Git](https://git-scm.com/)
 
 ---
 
