@@ -19,7 +19,7 @@ curl http://localhost:8080/api/todos
 
 curl -X PUT http://localhost:8080/api/todos/1 \
   -H "Content-Type: application/json" \
-  -d '{"title":"Learn Spring Boot","description":"Build awesome apps","completed":true'
+  -d '{"title":"Learn Spring Boot","description":"Build awesome apps","completed":true}'
 ```
 
 ```cmd
